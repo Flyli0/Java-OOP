@@ -37,6 +37,9 @@ public class Grades {
 		else if(a>=50) {
 			System.out.println("D");
 		}
+		else {
+			System.out.println("You failed");
+		}
 		scn.close();
 	}
 

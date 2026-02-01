@@ -8,7 +8,7 @@ public class Palindromchek {
 		int len = a.length();
 		boolean pali = true;
 		for(int i = 0; i<(len/2); i++) {
-			char letter1 = a.charAt(i);
+			char letter1 = a.charAt(i); // a[]
 			char letter2 = a.charAt(len-i-1);
 			if(letter1!=letter2) {
 				pali = false;
