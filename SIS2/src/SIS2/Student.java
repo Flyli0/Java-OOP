@@ -7,15 +7,16 @@ public class Student {
 	private int year_of_study = 1;
 	private String Id;
 	private Scanner scn = new Scanner(System.in);
-	Student(String newName,String newID){
+	public Student(String newName,String newID){
 		studentName = newName;
 		Id = newID;
 	}
-	public void getName(){
-		System.out.println(studentName);
+	
+	public String getName(){
+		return this.studentName;
 	}
 	public void setName() {
-		final Pattern pat = Pattern.compile("[a-zA-z]*");
+		final Pattern pat = Pattern.compile("[a-zA-Z]*");
 		String a = scn.nextLine();
 		Matcher mat = pat.matcher(a);
 		if(mat.find()) {
@@ -25,8 +26,8 @@ public class Student {
 			System.out.println("Wrong format");
 		}
 	}
-	public void getId() {
-		System.out.println(Id);
+	public String getId() {
+		return Id;
 	}
 	public void getYear() {
 		System.out.println(year_of_study);
@@ -40,5 +41,9 @@ public class Student {
 		if(year_of_study < 8) {
 			year_of_study++;
 		}
+	}
+	
+	public String toString() {
+		return "name: " + this.studentName + "ID: " + this.Id;
 	}
 }

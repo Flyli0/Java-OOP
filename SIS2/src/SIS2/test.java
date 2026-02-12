@@ -8,6 +8,7 @@ public class test {
 		s.getYear();
 		s.incrementStudyYear();
 		s.getYear();
+		s.getId();
 		
 		StarTriangle tri = new StarTriangle(5);
 		System.out.print(tri.toString());
