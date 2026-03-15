@@ -25,4 +25,16 @@ public class PhDStudent extends Person{
 		    System.out.println("Owner set to: " + pet.getOwner());
 		}
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o == null) return false;
+		if(!(o instanceof Person)) return  false;
+		PhDStudent temp = (PhDStudent) o;
+		
+		if(temp.getOccupation() == this.doctorship) {
+			return true;
+		}
+		return false;
+	}
 }
