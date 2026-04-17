@@ -1,11 +1,12 @@
 package SIS2;
 
-public class Time {
+public class Time implements Comparable<Time>{
 	private int hour;
 	private int minute;
 	private int second;
 	private boolean AM;
-	Time(int newh, int newm, int news) {
+	
+	public Time(int newh, int newm, int news) {
 		if(newh <= 23 && newh>=0) {
 			hour = newh;
 		}
@@ -101,5 +102,17 @@ public class Time {
 			ho = "0"+hour;
 		}
 		return ho+":"+min+":"+sec;
+	}
+	@Override
+	public int compareTo(Time o) {
+		if(this.hour != o.hour) {
+			return Integer.compare(this.hour,o.hour);
+		}
+		else if(this.minute != o.minute) {
+			return Integer.compare(this.minute, o.minute);
+		}
+		else {
+			return Integer.compare(this.second, o.second);
+		}
 	}
 }

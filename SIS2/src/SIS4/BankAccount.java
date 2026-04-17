@@ -34,6 +34,10 @@ public class BankAccount {
 		}
 	}
 	
+	public String toString() {
+		return this.owner + ": " + this.value;
+	}
+	
 	public void transfer(BankAccount other, int value) {
 		this.withdraw(value);
 		other.deposit(value);

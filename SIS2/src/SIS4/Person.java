@@ -5,13 +5,11 @@ public class Person implements CanHavePizza{
 	private String address;
 	private BankAccount acc;
 	
-	{
-		acc = new BankAccount(this.name,0);
-	}
 	
 	public Person(String name, String address) {
 		this.name = name;
 		this.address = address;
+		acc = new BankAccount(name,100);
 	}
 	
 	public String getName() {
